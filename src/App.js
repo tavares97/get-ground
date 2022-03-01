@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container, Typography } from '@mui/material';
+import ListBooks from './components/List';
+
+import Search from './components/Search';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Container maxWidth='lg'>
+			<Typography variant='h1' gutterBottom style={{ textAlign: 'center' }}>
+				Get Ground book list
+			</Typography>
+			<Search />
+
+			<ListBooks />
+		</Container>
+	);
 }
 
 export default App;
